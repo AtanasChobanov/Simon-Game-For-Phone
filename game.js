@@ -46,7 +46,7 @@ function startOver() {
   level = 0;
   gamePattern = [];
   userClickedPattern = [];
-  started = false;
+  nextSequence(level);
 }
 
 $(".btn").click(function () {
@@ -58,13 +58,4 @@ $(".btn").click(function () {
 });
 
 var level = 0;
-var started = false;
-
-$(document).keydown(function () {
-  if (started === true) {
-  } else {
-    started = true;
-    $("#level-title").text("Level 0");
-    nextSequence(level);
-  }
-});
+nextSequence(level);
